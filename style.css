@@ -113,12 +113,19 @@ footer {
 
   nav ul {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-direction: row;         /* maintain horizontal layout */
+    flex-wrap: wrap;             /* allows wrap if absolutely needed */
+    justify-content: center;
+    gap: 15px;
   }
 
   nav ul li {
-    margin: 10px 0;
+    margin: 0;
+  }
+
+  nav ul li a {
+    font-size: 1.2em;            /* larger touch-friendly text */
+    padding: 6px 8px;
   }
 
   .core-objectives {
@@ -131,9 +138,12 @@ footer {
     padding: 15px;
   }
 
+  main p {
+    margin-bottom: 1.5em;        /* more space after paragraphs */
+  }
+
   footer {
     font-size: 0.8em;
     padding: 10px;
   }
 }
-
