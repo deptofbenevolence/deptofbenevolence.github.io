@@ -147,13 +147,31 @@ footer {
     padding: 10px;
   }
   
-	  header .titles h1 {
-	  font-size: 1.4em;
-	}
+header .titles h1 {
+  font-size: 1.4em;
+  text-align: center;
+  line-height: 1.2;
+}
 
+header .titles h1::before {
+  content: "Department of";
+  display: block;
+  font-size: 0.6em;
+  letter-spacing: 0.5px;
+}
 
-	header .titles h2 {
-  display: none;
+header .titles h1::after {
+  content: "Strategic Benevolence";
+  display: block;
+  font-size: 1.2em;
+  font-weight: bold;
+  letter-spacing: 0.8px;
+}
+
+/* Hide the original text */
+header .titles h1 {
+  color: transparent;
+  position: relative;
 }
 
 }
