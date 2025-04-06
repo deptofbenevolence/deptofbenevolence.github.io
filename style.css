@@ -124,8 +124,8 @@ footer {
   }
 
   nav ul li a {
-    font-size: 1.2em;            /* larger touch-friendly text */
-    padding: 6px 8px;
+    font-size: 1.1em;            /* larger touch-friendly text */
+    padding: 4px 8px;
   }
 
   .core-objectives {
@@ -139,7 +139,7 @@ footer {
   }
 
   main p {
-    margin-bottom: 1.5em;        /* more space after paragraphs */
+    margin-bottom: 1.8em;        /* more space after paragraphs */
   }
 
   footer {
