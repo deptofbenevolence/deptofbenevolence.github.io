@@ -73,9 +73,10 @@ footer {
 
 .core-objectives {
   max-width: 50%;
-  margin: 0 auto 40px auto; /* center it and add space below */
-  padding: 0 10px; /* small breathing room inside */
+  margin: 0 0 40px 0; /* removes auto-centering, aligns left */
+  padding: 0 10px;
 }
+
 
 .core-objectives li {
   margin-bottom: 1.5em; /* spacing between list items */
