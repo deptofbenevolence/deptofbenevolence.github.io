@@ -70,3 +70,15 @@ footer {
   padding: 10px;
   border-top: 1px solid #ccc;
 }
+
+.core-objectives {
+  max-width: 50%;
+  margin: 0 auto 40px auto; /* center it and add space below */
+  padding: 0 10px; /* small breathing room inside */
+}
+
+.core-objectives li {
+  margin-bottom: 1.5em; /* spacing between list items */
+  line-height: 1.5;     /* improves readability */
+}
+
