@@ -16,13 +16,22 @@ header {
   background-color: #003366;
   color: #ffffff;
   padding: 20px;
-  text-align: center;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
 }
 
 header .seal {
-  width: 64px;
-  float: left;
+  width: 80px;
+  height: auto;
   margin-right: 20px;
+}
+
+header .titles h1,
+header .titles h2 {
+  margin: 0;
 }
 
 nav {
