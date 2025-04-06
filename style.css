@@ -84,3 +84,56 @@ footer {
   line-height: 1.5;     /* improves readability */
 }
 
+@media screen and (max-width: 768px) {
+  #container {
+    width: 100%;
+    border: none;
+  }
+
+  header {
+    padding: 10px;
+    text-align: center;
+    background-position: center top;
+  }
+
+  .header-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  header .seal {
+    margin: 0 0 10px 0;
+    width: 60px;
+  }
+
+  nav {
+    padding: 10px;
+    background-color: #e0e0e0;
+  }
+
+  nav ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+
+  .core-objectives {
+    max-width: 90%;
+    margin: 20px auto;
+    padding: 0 10px;
+  }
+
+  main {
+    padding: 15px;
+  }
+
+  footer {
+    font-size: 0.8em;
+    padding: 10px;
+  }
+}
+
