@@ -13,9 +13,11 @@ body {
 }
 
 header {
-  background-color: #003366;
+  background: url("media/header_bg.jpg") no-repeat center center;
+  background-size: cover;
   color: #ffffff;
   padding: 20px;
+  position: relative;
 }
 
 .header-content {
