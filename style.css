@@ -61,6 +61,7 @@ nav ul li a {
 
 main {
   padding: 20px;
+  text-align: left; /* ensures blocks align left */
 }
 
 footer {
@@ -73,7 +74,7 @@ footer {
 
 .core-objectives {
   max-width: 50%;
-  margin: 0 0 40px 0; /* removes auto-centering, aligns left */
+  margin: 0 0 40px 0; /* align left inside container */
   padding: 0 10px;
 }
 
