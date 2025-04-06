@@ -151,7 +151,9 @@ footer {
 	  font-size: 1.4em;
 	}
 
+
 	header .titles h2 {
-	  font-size: 1em;
-	}
+  display: none;
+}
+
 }
