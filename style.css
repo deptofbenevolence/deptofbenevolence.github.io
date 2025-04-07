@@ -31,6 +31,12 @@ header .seal {
   margin-right: 20px;
 }
 
+header .titles h3,
+header .titles h4 {
+  display: none;
+}
+
+
 header .titles h1,
 header .titles h2 {
   margin: 0;
@@ -102,13 +108,42 @@ footer {
   align-items: center;
   justify-content: flex-start;
 }
-
-header .seal {
-  width: 80px;
-  height: auto;
-  margin-right: 16px;
-  flex-shrink: 0;
+header .titles {
+  text-align: left;
+  display: block;
 }
+
+ header .titles h1,
+  header .titles h2 {
+    display: none;
+  }
+
+  header .titles h3,
+  header .titles h4 {
+    display: block;
+    margin: 0;
+  }
+
+
+  header .titles h3 {
+    font-size: 0.9em;
+    font-style: italic;
+    color: #ffffff;
+  }
+
+  header .titles h4 {
+    font-size: 1.4em;
+    font-weight: bold;
+    color: #ffffff;
+    letter-spacing: 0.5px;
+  }
+
+	header .seal {
+	  width: 80px;
+	  height: auto;
+	  margin-right: 16px;
+	  flex-shrink: 0;
+	}
 
   nav {
     padding: 10px;
@@ -150,65 +185,4 @@ header .seal {
     font-size: 0.8em;
     padding: 10px;
   }
-header .titles {
-  text-align: left;
-  display: block;
-}
-
-header .titles h1 {
-  color: transparent;
-}
-
-header .titles h1::before {
-  content: "Department of";
-  display: block;
-  font-size: 0.85em;
-  font-weight: normal;
-  letter-spacing: 0.6px;
-  font-style: italic; /* ← This makes it italic */
-  color: #ffffff; /* ← Explicitly set visible color */
-}
-
-header .titles h1::after {
-  content: "Strategic Benevolence";
-  display: block;
-  font-size: 1.4em;
-  font-weight: bold;
-  letter-spacing: 0.8px;
-  color: #ffffff; /* ← Explicitly set visible color */
-}
-
-header .titles h2 {
-  display: none;
-}
-  
-  
-/*  
-header .titles h1 {
-  font-size: 1.4em;
-  text-align: center;
-  line-height: 1.2;
-}
-
-header .titles h1::before {
-  content: "Department of";
-  display: block;
-  font-size: 0.6em;
-  letter-spacing: 0.5px;
-}
-
-header .titles h1::after {
-  content: "Strategic Benevolence";
-  display: block;
-  font-size: 1.2em;
-  font-weight: bold;
-  letter-spacing: 0.8px;
-}
-
-/* Hide the original text 
-header .titles h1 {
-  color: transparent;
-  position: relative;
-}*/
-
 }
