@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Department of Strategic Benevolence</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div id="container">
+      <header id="dsb-header"></header>
+      <div id="dsb-nav"></div>
+
+      <main>
+        <h3>Bluesky Embed Test</h3>
+        <script
+          type="module"
+          src="https://cdn.jsdelivr.net/npm/bsky-embed/dist/bsky-embed.es.js"
+          async
+        ></script>
+        <bsky-embed
+          username="deptofbenevolence.bsky.social"
+          mode=""
+          limit="2"
+          load-more="false"
+          disable-styles="false"
+          custom-styles=".w-full { font-family: 'Times New Roman', Times, serif; }"
+        >
+        </bsky-embed>
+      </main>
+
+      <footer>
+        &copy; 2025 Department of Strategic Benevolence. All freedoms reserved.
+      </footer>
+    </div>
+    <script src="/script/inject-includes.js"></script>
+    <script src="/script/rotate-slogan.js"></script>
+  </body>
+</html>

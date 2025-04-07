@@ -74,10 +74,6 @@ header .titles h3 {
   text-align: center;
 }
 
-header .titles h4 {
-  display: none;
-}
-
 header .titles h3.align-left {
   text-align: left;
 }
@@ -244,42 +240,25 @@ footer {
 
   /* ### Mobile Navbar Styles ### */
   nav {
-    padding: 6px;
+    padding: 16px;
     background-color: #e0e0e0;
   }
 
   nav ul {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: row; /* maintain horizontal layout */
+    flex-wrap: wrap; /* allows wrap if absolutely needed */
     justify-content: center;
-    padding: 0;
-    margin: 0;
-    gap: 0; /* optional */
+    gap: 10px;
   }
 
   nav ul li {
-    flex: 0 0 33.3333%; /* each takes 1/3 width */
-    box-sizing: border-box;
-    padding: 5px;
     margin: 0;
-    border-right: 0;
   }
 
   nav ul li a {
-    display: flex; /* flex container */
-    align-items: center; /* vertical centering */
-    justify-content: center; /* horizontal centering */
-    background-color: #6894d644;
-    border: 1px solid #ccc;
-    padding: 0;
-    text-align: center;
-    font-weight: normal;
-    color: #003366;
-    text-decoration: none;
-    font-size: 1em;
-    height: 100%; /* ensures fill of li block */
-    box-sizing: border-box;
-    min-height: 36px;
+    font-size: 1.1em; /* larger touch-friendly text */
+    padding: 4px 8px;
   }
 
   /* ### Mobile Main Content Styles ### */

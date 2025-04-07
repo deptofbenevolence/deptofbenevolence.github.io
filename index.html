@@ -13,19 +13,69 @@
       <div id="dsb-nav"></div>
 
       <main>
-        <h3>Welcome to the Department</h3>
-        <p>
-          The Department of Strategic Benevolence is entrusted with the careful
-          redistribution of discomfort for the benefit of long-term stability.
-          We thank you for your voluntary compliance.
-        </p>
+        <div id="homepage-layout">
+          <!-- Main Content Column -->
+          <div class="main-column">
+            <div class="newsfeed-container">
+              <!-- Embed your working Bluesky feed here -->
+              <h2>Department Newsfeed</h2>
+              <div id="bsky-feed">
+                <script
+                  type="module"
+                  src="https://cdn.jsdelivr.net/npm/bsky-embed/dist/bsky-embed.es.js"
+                  async
+                ></script>
+                <bsky-embed
+                  username="deptofbenevolence.bsky.social"
+                  mode=""
+                  limit="5"
+                  load-more="true"
+                  disable-styles="false"
+                  custom-styles="img {display: none;}"
+                 /* custom-styles=".w-full { font-family: 'Times New Roman', Times, serif; } .w-14&nbsp;h-14&nbsp;rounded-full {display: none;}"*/
+                >
+                </bsky-embed>
+              </div>
+            </div>
+          </div>
 
-        <p>
-          Please consult our most recent memo:<br />
-          <a href="memos/memo-001.html"
-            >Memo 001 — On the Redistribution of Sunlight</a
-          >
-        </p>
+          <!-- Sidebar Column -->
+          <div class="sidebar-column">
+            <div class="blurb-container">
+              <h3>About the Department</h3>
+              <p>
+                <b>The Department of Strategic Benevolence</b> was established
+                following the 2024 Supreme Court ruling on executive immunity,
+                enabling a new era of outcome-based governance.
+              </p>
+
+              <p>
+                Through rapid structural correction and resource reallocation,
+                the Department ensures universal access to care, education, and
+                dignity—while decommissioning systems no longer aligned with the
+                public good.
+              </p>
+              <p>
+                Authority is streamlined. Compassion is operationalized.
+                Progress is mandatory.
+              </p>
+            </div>
+
+            <div class="survey-container">
+              <h3>Quick Survey</h3>
+              <p>Are you currently hydrated and adequately grateful?</p>
+              <!-- survey form or buttons go here -->
+            </div>
+
+            <div class="spotlight-container">
+              <h3>Policy Spotlight</h3>
+              <p>
+                <strong>The Gentle Coercion Initiative</strong><br />Encouraging
+                optimal behavior through incentivized discomfort zones.
+              </p>
+            </div>
+          </div>
+        </div>
       </main>
 
       <footer>
