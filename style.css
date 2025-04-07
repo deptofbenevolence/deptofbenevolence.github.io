@@ -162,9 +162,10 @@ header .titles h1 {
 header .titles h1::before {
   content: "Department of";
   display: block;
-  font-size: 0.7em;
+  font-size: 0.85em;
   font-weight: normal;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.6px;
+  font-style: italic; /* ← This makes it italic */
 }
 
 header .titles h1::after {
