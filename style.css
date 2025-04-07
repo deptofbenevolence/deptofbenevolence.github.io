@@ -96,15 +96,19 @@ footer {
     background-position: center top;
   }
 
-  .header-content {
-    flex-direction: column;
-    align-items: center;
-  }
+.header-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
 
-  header .seal {
-    margin: 0 0 10px 0;
-    width: 60px;
-  }
+header .seal {
+  width: 80px;
+  height: auto;
+  margin-right: 10px;
+  flex-shrink: 0;
+}
 
   nav {
     padding: 10px;
@@ -146,7 +150,43 @@ footer {
     font-size: 0.8em;
     padding: 10px;
   }
+  header .titles {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+}
+
+header .titles h1 {
+  font-size: 1.4em;
+  color: transparent;
+  line-height: 1.2;
+  margin: 0;
+  position: relative;
+}
+
+header .titles h1::before {
+  content: "Department of";
+  display: block;
+  font-size: 0.6em;
+  color: #ffffff;
+  letter-spacing: 0.5px;
+}
+
+header .titles h1::after {
+  content: "Strategic Benevolence";
+  display: block;
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #ffffff;
+  letter-spacing: 0.8px;
+}
+
+header .titles h2 {
+  display: none;
+}
   
+  
+/*  
 header .titles h1 {
   font-size: 1.4em;
   text-align: center;
@@ -168,10 +208,10 @@ header .titles h1::after {
   letter-spacing: 0.8px;
 }
 
-/* Hide the original text */
+/* Hide the original text 
 header .titles h1 {
   color: transparent;
   position: relative;
-}
+}*/
 
 }
