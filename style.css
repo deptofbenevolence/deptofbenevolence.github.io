@@ -106,7 +106,7 @@ footer {
 header .seal {
   width: 80px;
   height: auto;
-  margin-right: 10px;
+  margin-right: 16px;
   flex-shrink: 0;
 }
 
@@ -150,34 +150,31 @@ header .seal {
     font-size: 0.8em;
     padding: 10px;
   }
-  header .titles {
+header .titles {
   text-align: left;
-  display: flex;
-  flex-direction: column;
+  display: block;
 }
 
 header .titles h1 {
-  font-size: 1.4em;
-  color: transparent;
-  line-height: 1.2;
   margin: 0;
-  position: relative;
+  font-size: 1.2em;
+  line-height: 1.1;
+  color: #ffffff;
 }
 
 header .titles h1::before {
   content: "Department of";
   display: block;
-  font-size: 0.6em;
-  color: #ffffff;
+  font-size: 0.7em;
+  font-weight: normal;
   letter-spacing: 0.5px;
 }
 
 header .titles h1::after {
   content: "Strategic Benevolence";
   display: block;
-  font-size: 1.2em;
+  font-size: 1.4em;
   font-weight: bold;
-  color: #ffffff;
   letter-spacing: 0.8px;
 }
 
