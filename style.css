@@ -166,6 +166,7 @@ header .titles h1::before {
   font-weight: normal;
   letter-spacing: 0.6px;
   font-style: italic; /* ← This makes it italic */
+  color: #ffffff; /* ← Explicitly set visible color */
 }
 
 header .titles h1::after {
@@ -174,6 +175,7 @@ header .titles h1::after {
   font-size: 1.4em;
   font-weight: bold;
   letter-spacing: 0.8px;
+  color: #ffffff; /* ← Explicitly set visible color */
 }
 
 header .titles h2 {
