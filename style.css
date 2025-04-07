@@ -1,3 +1,6 @@
+/* DSB Website CSS */
+
+/* ### General Styles ### */
 body {
   margin: 0;
   font-family: "Times New Roman", serif;
@@ -12,6 +15,7 @@ body {
   border: 1px solid #ccc;
 }
 
+/* ### Header Styles ### */
 header {
   background: url("media/header_bg.jpg") no-repeat center center;
   background-size: cover;
@@ -31,16 +35,44 @@ header .seal {
   margin-right: 20px;
 }
 
-header .titles h3,
-header .titles h4 {
-  display: none;
+header .titles {
+  display: inline-block;
 }
 
-header .titles h1,
-header .titles h2 {
+header .title-core {
+  display: inline-block;
+  text-align: left;
+}
+
+header .title-core h1 {
+  text-align: center;
+  margin: 0 auto;
+  font-size: 1.1em;
+  font-style: italic;
+}
+
+header .title-core h2 {
+  font-size: 2em;
+  font-weight: bold;
   margin: 0;
+  letter-spacing: 0.5px;
+  white-space: nowrap; /* prevent wrapping, optional */
+  text-align: left;
 }
 
+/* Slogan positioning */
+header .titles h3 {
+  font-size: 1em;
+  margin-top: 0.5em;
+  width: 100%;
+  text-align: center;
+}
+
+header .titles h3.align-left {
+  text-align: left;
+}
+
+/* ### Navbar Styles ### */
 nav {
   background-color: #e0e0e0;
   padding: 10px;
@@ -64,9 +96,10 @@ nav ul li a {
   font-weight: bold;
 }
 
+/* ### Main Content Styles ### */
 main {
   padding: 20px;
-  text-align: left; /* ensures blocks align left */
+  text-align: left;
 }
 
 footer {
@@ -77,9 +110,10 @@ footer {
   border-top: 1px solid #ccc;
 }
 
+/* ### Content Specific Styles ### */
 .core-objectives {
   max-width: 50%;
-  margin: 0 0 40px 0; /* align left inside container */
+  margin: 0 0 40px 0;
   padding: 0 10px;
 }
 
@@ -88,15 +122,20 @@ footer {
   line-height: 1.5; /* improves readability */
 }
 
-@media screen and (max-width: 1441px) {
+/* ### ### ### ### ### ### ### ## */
+/* ### MOBILE FRIENDLY CONFIG ### */
+/* ### ### ### ### ### ### ### ## */
+
+@media screen and (max-aspect-ratio: 1/1) {
   #container {
     width: 100%;
     border: none;
   }
 
+  /* ### Mobile Header Styles ### */
   header {
     padding: 10px;
-    text-align: center;
+    /*text-align: center;*/
     background-position: center top;
   }
 
@@ -106,32 +145,31 @@ footer {
     align-items: center;
     justify-content: flex-start;
   }
+
   header .titles {
     text-align: center;
     display: block;
+    color: #ffffff;
   }
 
   header .titles h1,
   header .titles h2 {
-    display: none;
-  }
-
-  header .titles h3,
-  header .titles h4 {
     display: block;
     margin: 0;
   }
 
   header .titles h3 {
-    font-size: 1.1em;
-    font-style: italic;
-    color: #ffffff;
+    display: none;
   }
 
-  header .titles h4 {
+  header .titles h1 {
+    font-size: 1.1em;
+    font-style: italic;
+  }
+
+  header .titles h2 {
     font-size: 1.8em;
     font-weight: bold;
-    color: #ffffff;
     letter-spacing: 0.5px;
   }
 
@@ -142,6 +180,7 @@ footer {
     flex-shrink: 0;
   }
 
+  /* ### Mobile Navbar Styles ### */
   nav {
     padding: 10px;
     background-color: #e0e0e0;
@@ -164,12 +203,7 @@ footer {
     padding: 4px 8px;
   }
 
-  .core-objectives {
-    max-width: 90%;
-    margin: 20px auto;
-    padding: 0 10px;
-  }
-
+  /* ### Mobile Main Content Styles ### */
   main {
     padding: 15px;
   }
@@ -178,8 +212,16 @@ footer {
     margin-bottom: 1.8em; /* more space after paragraphs */
   }
 
+  /* ### Mobile Footer Content Styles ### */
   footer {
     font-size: 0.8em;
     padding: 10px;
+  }
+
+  /* ### Mobile Content Specific Styles ### */
+  .core-objectives {
+    max-width: 90%;
+    margin: 20px auto;
+    padding: 0 10px;
   }
 }
