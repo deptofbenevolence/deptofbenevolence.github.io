@@ -237,9 +237,9 @@ footer {
   }
 */
   header .seal {
-    width: 64px;
+    width: 60px;
     height: auto;
-    margin-right: 12px;
+    margin-right: 8px;
     flex-shrink: 0;
   }
 
