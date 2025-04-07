@@ -207,7 +207,7 @@ footer {
   header .titles h4 {
     display: block;
     margin: 0;
-    font-size: clamp(0.6em, 4.6vw, 3em);
+    font-size: clamp(0.3em, 4.6vw, 3em);
     line-height: 1.2;
     font-style: normal;
     color: #ffffff;
