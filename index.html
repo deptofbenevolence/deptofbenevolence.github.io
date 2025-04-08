@@ -18,7 +18,7 @@
           <div class="main-column">
             <div class="newsfeed-container">
               <!-- Embed your working Bluesky feed here -->
-              <h2>Department Newsfeed</h2>
+              <div class="container-header">Narrative Assurance Stream</div>
               <div id="bsky-feed">
                 <script
                   type="module"
@@ -31,8 +31,11 @@
                   limit="5"
                   load-more="true"
                   disable-styles="false"
-                  custom-styles="img {display: none;}"
-                 /* custom-styles=".w-full { font-family: 'Times New Roman', Times, serif; } .w-14&nbsp;h-14&nbsp;rounded-full {display: none;}"*/
+                  custom-styles="
+                    img { display: none; }
+                    .w-full { font-family: 'Times New Roman', Times, serif; }
+                    #bsky-load-more { padding: 0.3rem; font-family: 'Times New Roman', Times, serif; font-size: 1em; line-height: 1.0; color: #003366; background-color: rgba(255, 255, 255, 0); text-decoration: underline;}
+                  "
                 >
                 </bsky-embed>
               </div>
@@ -41,34 +44,37 @@
 
           <!-- Sidebar Column -->
           <div class="sidebar-column">
-            <div class="blurb-container">
-              <h3>About the Department</h3>
-              <p>
-                <b>The Department of Strategic Benevolence</b> was established
-                following the 2024 Supreme Court ruling on executive immunity,
-                enabling a new era of outcome-based governance.
+            <div class="blurb-container" style="text-align: center">
+              <div class="container-header">About the Department</div>
+              <p
+                style="
+                  padding-top: 0.3em;
+                  margin-top: 0.3em;
+                  padding-bottom: 0.3em;
+                  margin-bottom: 0.3em;
+                  text-align: left;
+                "
+              >
+                The <b>DSB</b> was established following the 2024 Supreme Court
+                ruling on executive immunity, enabling a new era of
+                outcome-based governance.
               </p>
-
-              <p>
-                Through rapid structural correction and resource reallocation,
-                the Department ensures universal access to care, education, and
-                dignity—while decommissioning systems no longer aligned with the
-                public good.
-              </p>
-              <p>
-                Authority is streamlined. Compassion is operationalized.
-                Progress is mandatory.
-              </p>
+              <a
+                href="about.html"
+                alt="Learn more about The Department"
+                style="text-align: center; margin-top: 0"
+                >Learn more</a
+              ><br />
             </div>
 
             <div class="survey-container">
-              <h3>Quick Survey</h3>
+              <div class="container-header">Quick Survey</div>
               <p>Are you currently hydrated and adequately grateful?</p>
               <!-- survey form or buttons go here -->
             </div>
 
             <div class="spotlight-container">
-              <h3>Policy Spotlight</h3>
+              <div class="container-header">Policy Spotlight</div>
               <p>
                 <strong>The Gentle Coercion Initiative</strong><br />Encouraging
                 optimal behavior through incentivized discomfort zones.

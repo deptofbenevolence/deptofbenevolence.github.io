@@ -1,6 +1,8 @@
 /* DSB Website CSS */
 
-/* ### General Styles ### */
+/* ====================== */
+/* === General Styles === */
+/* ====================== */
 body {
   margin: 0;
   font-family: "Times New Roman", serif;
@@ -15,7 +17,22 @@ body {
   border: 1px solid #ccc;
 }
 
-/* ### Header Styles ### */
+main {
+  padding: 20px;
+  text-align: left;
+}
+
+footer {
+  background-color: #f0f0f0;
+  text-align: center;
+  font-size: 0.9em;
+  padding: 10px;
+  border-top: 1px solid #ccc;
+}
+
+/* ===================== */
+/* === Header Styles === */
+/* ===================== */
 header {
   background: url("media/header_bg.jpg") no-repeat center center;
   background-size: cover;
@@ -62,11 +79,10 @@ header .title-core h2 {
   font-weight: bold;
   margin: 0;
   letter-spacing: 0.5px;
-  white-space: nowrap; /* prevent wrapping, optional */
+  white-space: nowrap;
   text-align: left;
 }
 
-/* Slogan positioning */
 header .titles h3 {
   font-size: 1em;
   margin-top: 0.5em;
@@ -74,15 +90,17 @@ header .titles h3 {
   text-align: center;
 }
 
-header .titles h4 {
-  display: none;
-}
-
 header .titles h3.align-left {
   text-align: left;
 }
 
-/* ### Navbar Styles ### */
+header .titles h4 {
+  display: none;
+}
+
+/* ===================== */
+/* === Navbar Styles === */
+/* ===================== */
 nav {
   background-color: #e0e0e0;
   padding: 10px;
@@ -97,11 +115,13 @@ nav ul {
 
 nav ul li {
   display: inline;
-
   position: relative;
-  padding-right: 10px;
-  padding-left: 10px;
-  border-right: 1px solid #003366; /* ← this creates the dividing line */
+  padding: 0 10px;
+  border-right: 1px solid #003366;
+}
+
+nav ul li:last-child {
+  border-right: none;
 }
 
 nav ul li a {
@@ -110,21 +130,9 @@ nav ul li a {
   font-weight: normal;
 }
 
-/* ### Main Content Styles ### */
-main {
-  padding: 20px;
-  text-align: left;
-}
-
-footer {
-  background-color: #f0f0f0;
-  text-align: center;
-  font-size: 0.9em;
-  padding: 10px;
-  border-top: 1px solid #ccc;
-}
-
-/* ### Content Specific Styles ### */
+/* ============================ */
+/* === Page-Specific Styles === */
+/* ============================ */
 .core-objectives {
   max-width: 50%;
   margin: 0 0 40px 0;
@@ -132,184 +140,14 @@ footer {
 }
 
 .core-objectives li {
-  margin-bottom: 1.5em; /* spacing between list items */
-  line-height: 1.5; /* improves readability */
-}
-
-/* ### ### ### ### ### ### ### ## */
-/* ### MOBILE FRIENDLY CONFIG ### */
-/* ### ### ### ### ### ### ### ## */
-
-@media screen and (max-aspect-ratio: 1/1) {
-  #container {
-    width: 100%;
-    border: none;
-  }
-
-  /* ### Mobile Header Styles ### */
-  header {
-    padding: 10px;
-    /*text-align: center;*/
-    background-position: center top;
-  }
-  /*
-  header {
-    background: url("media/header_bg.jpg") no-repeat center center;
-    background-size: cover;
-    color: #ffffff;
-    padding: 20px;
-    position: relative;
-  }
-
-  .header-content {
-    display: flex;
-    position: relative;
-    align-items: center;
-  }
-*/
-  .header-content {
-    display: flex;
-    flex-direction: row;
-    align-items: left;
-    position: relative;
-    justify-content: flex-start;
-  }
-
-  /*
-  header .titles {
-    display: inline-block;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    text-align: center;
-  }
-    */
-  header .titles {
-    text-align: left;
-    position: relative;
-    display: inline-block;
-    transform: translateX(-0%);
-    left: auto;
-    color: #ffffff;
-  }
-  /*
-  header .titles h1,
-  header .titles h2 {
-    display: block;
-    margin: 0;
-  }
-*/
-
-  header .titles h1,
-  header .titles h2 {
-    display: none;
-  }
-  header .titles h4 {
-    display: inline-block;
-    margin: 0;
-    font-size: clamp(0.3em, 4vw, 2em);
-    line-height: 1.2;
-    font-style: normal;
-    color: #ffffff;
-    white-space: nowrap;
-    text-align: left;
-  }
-
-  header .titles h3 {
-    display: inline-block;
-    margin: 0;
-    font-size: 0.8em; /* or whatever size you want */
-    font-style: normal;
-    text-align: left;
-    color: #ffffff;
-  }
-
-  /*
-  header .titles h1 {
-    font-size: 1.1em;
-    font-style: italic;
-  }
-
-  header .titles h2 {
-    font-size: 1.8em;
-    font-weight: bold;
-    letter-spacing: 0.5px;
-  }
-*/
-  header .seal {
-    width: 60px;
-    height: auto;
-    margin-right: 8px;
-    flex-shrink: 0;
-  }
-
-  /* ### Mobile Navbar Styles ### */
-  nav {
-    padding: 6px;
-    background-color: #e0e0e0;
-  }
-
-  nav ul {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 0;
-    margin: 0;
-    gap: 0; /* optional */
-  }
-
-  nav ul li {
-    flex: 0 0 33.3333%; /* each takes 1/3 width */
-    box-sizing: border-box;
-    padding: 5px;
-    margin: 0;
-    border-right: 0;
-  }
-
-  nav ul li a {
-    display: flex; /* flex container */
-    align-items: center; /* vertical centering */
-    justify-content: center; /* horizontal centering */
-    background-color: #6894d644;
-    border: 1px solid #ccc;
-    padding: 0;
-    text-align: center;
-    font-weight: normal;
-    color: #003366;
-    text-decoration: none;
-    font-size: 1em;
-    height: 100%; /* ensures fill of li block */
-    box-sizing: border-box;
-    min-height: 36px;
-  }
-
-  /* ### Mobile Main Content Styles ### */
-  main {
-    padding: 15px;
-  }
-
-  main p {
-    margin-bottom: 1.8em; /* more space after paragraphs */
-  }
-
-  /* ### Mobile Footer Content Styles ### */
-  footer {
-    font-size: 0.8em;
-    padding: 10px;
-  }
-
-  /* ### Mobile Content Specific Styles ### */
-  .core-objectives {
-    max-width: 90%;
-    margin: 20px auto;
-    padding: 0 10px;
-  }
+  margin-bottom: 1.5em;
+  line-height: 1.5;
 }
 
 #homepage-layout {
   display: flex;
-  flex-direction: row-reverse; /* ← this flips the columns */
-  gap: 16px;
+  flex-direction: row-reverse;
+  gap: 12px;
   padding: 5px;
 }
 
@@ -321,7 +159,7 @@ footer {
   flex: 2;
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 12px;
 }
 
 .policy-meta,
@@ -332,9 +170,179 @@ footer {
 .blurb-container,
 .survey-container,
 .spotlight-container {
+  padding: 0; /* remove padding to let header align flush */
+  padding-bottom: 12px;
+  /*overflow: hidden;*/
+  /*border-radius: 4px;*/
   background-color: #f9f9f9;
   border: 1px solid #ccc;
-  padding: 12px;
   font-family: "Times New Roman", serif;
-  /*box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.05);*/
+}
+
+.policy-meta > *:not(.container-header),
+.policy-sources > *:not(.container-header),
+.policy-pdf > *:not(.container-header),
+.policy-summary > *:not(.container-header),
+.newsfeed-container > *:not(.container-header),
+.blurb-container > *:not(.container-header),
+.survey-container > *:not(.container-header),
+.spotlight-container {
+  padding: 12px;
+}
+
+.container-header {
+  margin: 0;
+  padding: 6px 12px;
+  background-color: #e5e5e5;
+  color: #003366;
+  font-weight: normal;
+  font-size: 1em;
+  border-bottom: 1px solid #ccc;
+  font-family: "Times New Roman", serif;
+  text-align: center;
+  /*
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  */
+}
+
+/* ========================= */
+/* === Mobile Styles ======= */
+/* ========================= */
+@media screen and (max-aspect-ratio: 1/1) {
+  #container {
+    width: 100%;
+    border: none;
+  }
+
+  header {
+    padding: 10px;
+    background-position: center top;
+  }
+
+  .header-content {
+    display: flex;
+    flex-direction: row;
+    align-items: left;
+    position: relative;
+    justify-content: flex-start;
+  }
+
+  header .titles {
+    text-align: left;
+    position: relative;
+    display: inline-block;
+    transform: none;
+    left: auto;
+    color: #ffffff;
+  }
+
+  header .titles h1,
+  header .titles h2 {
+    display: none;
+  }
+
+  /* Used for Mobile Title */
+  header .titles h4 {
+    display: inline-block;
+    margin: 0;
+    font-size: clamp(0.3em, 4vw, 2em);
+    line-height: 1.2;
+    font-style: normal;
+    color: #ffffff;
+    white-space: nowrap;
+    text-align: left;
+  }
+
+  /* Used for Mobile Title */
+  header .titles h3 {
+    display: inline-block;
+    margin: 0;
+    font-size: 0.8em;
+    font-style: normal;
+    text-align: left;
+    color: #ffffff;
+  }
+
+  header .seal {
+    width: 60px;
+    height: auto;
+    margin-right: 8px;
+    flex-shrink: 0;
+  }
+
+  nav {
+    padding: 6px;
+    background-color: #e0e0e0;
+  }
+
+  nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+  }
+
+  nav ul li {
+    flex: 0 0 33.3333%;
+    box-sizing: border-box;
+    padding: 5px;
+    margin: 0;
+    border-right: 0;
+    text-align: center;
+  }
+
+  nav ul li a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #6894d644;
+    border: 1px solid #ccc;
+    padding: 0;
+    text-align: center;
+    font-weight: normal;
+    color: #003366;
+    text-decoration: none;
+    font-size: 1em;
+    height: 100%;
+    box-sizing: border-box;
+    min-height: 36px;
+  }
+
+  main {
+    padding: 15px;
+  }
+
+  main p {
+    margin-bottom: 1.8em;
+  }
+
+  footer {
+    font-size: 0.8em;
+    padding: 10px;
+  }
+
+  .core-objectives {
+    max-width: 90%;
+    margin: 20px auto;
+    padding: 0 10px;
+  }
+
+  #homepage-layout {
+    flex-direction: column; /* ← stacks the columns vertically */
+    padding: 10px;
+    gap: 20px;
+  }
+
+  .main-column,
+  .sidebar-column {
+    width: 100%;
+    flex: unset;
+  }
+
+  .sidebar-column {
+    flex-direction: column;
+    gap: 20px;
+  }
 }
