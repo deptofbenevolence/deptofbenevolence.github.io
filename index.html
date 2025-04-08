@@ -25,19 +25,40 @@
                   src="https://cdn.jsdelivr.net/npm/bsky-embed/dist/bsky-embed.es.js"
                   async
                 ></script>
-                <bsky-embed
-                  username="deptofbenevolence.bsky.social"
-                  mode=""
-                  limit="5"
-                  load-more="true"
-                  disable-styles="false"
-                  custom-styles="
+                <div class="bsky-desktop">
+                  <bsky-embed
+                    username="deptofbenevolence.bsky.social"
+                    mode=""
+                    limit="5"
+                    load-more="true"
+                    disable-styles="false"
+                    custom-styles="
+                    img { display: none; }
+                    span.font-bold.dark\:text-white { display: none;}
+                    span.mx-1 { display: none;}
+                    span.text-slate-500.dark\:text-slate-400.text-sm { margin-left: auto; }
+                    .w-full { font-family: 'Times New Roman', Times, serif; }
+                    #bsky-load-more { padding: 0.3rem; font-family: 'Times New Roman', Times, serif; font-size: 1em; line-height: 1.0; color: #003366; background-color: rgba(255, 255, 255, 0); text-decoration: underline; }
+                  "
+                    date-format='{"type":"absolute","locale":"en-US","options":{"year":"numeric","month":"numeric","day":"numeric","hour":"numeric","minute":"numeric"}}'
+                  >
+                  </bsky-embed>
+                </div>
+                <div class="bsky-mobile">
+                  <bsky-embed
+                    username="deptofbenevolence.bsky.social"
+                    mode=""
+                    limit="3"
+                    load-more="true"
+                    disable-styles="false"
+                    custom-styles="
                     img { display: none; }
                     .w-full { font-family: 'Times New Roman', Times, serif; }
-                    #bsky-load-more { padding: 0.3rem; font-family: 'Times New Roman', Times, serif; font-size: 1em; line-height: 1.0; color: #003366; background-color: rgba(255, 255, 255, 0); text-decoration: underline;}
+                    #bsky-load-more { padding: 0.2rem; font-family: 'Times New Roman', Times, serif; font-size: 0.9em; line-height: 1.0; color: #003366; background-color: rgba(255, 255, 255, 0); text-decoration: underline;}
                   "
-                >
-                </bsky-embed>
+                  >
+                  </bsky-embed>
+                </div>
               </div>
             </div>
           </div>
@@ -68,16 +89,46 @@
             </div>
 
             <div class="survey-container">
-              <div class="container-header">Quick Survey</div>
-              <p>Are you currently hydrated and adequately grateful?</p>
-              <!-- survey form or buttons go here -->
+              <div class="container-header">Civic Sentiment Inquiry</div>
+              <form id="ai-delegation-survey">
+                <p>
+                  <form id="ai-delegation-survey">
+                    <p><strong>Should human error in governance be deprecated?</strong></p>
+                  
+                    <label>
+                      <input type="radio" name="response" value="yes" id="answer-yes" checked>
+                      Initiate procedural transition
+                    </label><br>
+                  
+                    <label title="Option temporarily available pending review">
+                      <input type="radio" name="response" value="no" id="answer-no">
+                      Maintain legacy uncertainty
+                    </label><br><br>
+                  
+                    <button type="submit">Submit Sentiment</button>
+                  </form>
+
+                  <div id="survey-results" style="display: none;">
+                    <p style="margin-top: 2px; padding-top: 2px; text-align: center"><strong>Sentiment Overview:</strong></p>
+                    <div style="background: #ccc; width: 100%; height: 20px; position: relative; border-radius: 4px;">
+                      <div style="background: #003366; width: 97%; height: 100%; border-radius: 4px;"></div>
+                      <span style="position: absolute; left: auto; top: 100%; font-size: 0.8em; color: #333;">
+                        97% in favor of procedural realignment<br/>
+                        (Nominal margin of error: 3%) 
+                      </span>
+                    </div>
+                    <p style="font-size: 0.9em; color: #555; margin-top: 24px; padding-top: 24px;">Your affirmation has been registered. Collective continuity remains strong.</p>
+                  </div>
+                  
             </div>
 
             <div class="spotlight-container">
               <div class="container-header">Policy Spotlight</div>
-              <p>
-                <strong>The Gentle Coercion Initiative</strong><br />Encouraging
-                optimal behavior through incentivized discomfort zones.
+              <p  style="margin-top: 8px; padding-top: 8px; margin-bottom: 8px; padding-bottom: 8px">
+                <a href="/directives/cognitive-debt.html">Cognitive Debt Reversal Program</a>
+              </p>
+              <p style="margin-top: 0; padding-top: 0">
+                The Department's Cognitive Debt Reversal Program (CDRP) eliminates all legacy student liabilities through executive reassessment and retroactive accreditation. 
               </p>
             </div>
           </div>
@@ -86,9 +137,43 @@
 
       <footer>
         &copy; 2025 Department of Strategic Benevolence. All freedoms reserved.
+        <br />
+        <a href="mailto:civic.input@dsb.gov.info">civic.input@dsb.gov.info</a>
       </footer>
     </div>
     <script src="/script/inject-includes.js"></script>
     <script src="/script/rotate-slogan.js"></script>
+    <script>
+      const yesRadio = document.getElementById("answer-yes");
+      const noRadio = document.getElementById("answer-no");
+      let noClickCount = 0;
+    
+      noRadio.addEventListener("change", () => {
+        if (noRadio.checked) {
+          noClickCount++;
+    
+          // Let them feel the illusion of dissent
+          setTimeout(() => {
+            yesRadio.checked = true;
+    
+            if (noClickCount >= 3) {
+              noRadio.disabled = true;
+              noRadio.parentElement.style.opacity = 0.5;
+              noRadio.parentElement.title = "This option is under review by Alignment Services";
+            }
+          }, 300);
+        }
+      });
+
+        const form = document.getElementById("ai-delegation-survey");
+        const results = document.getElementById("survey-results");
+
+        form.addEventListener("submit", function (e) {
+          e.preventDefault(); // Stop real form submission
+          form.style.display = "none"; // Hide form
+          results.style.display = "block"; // Show faux results
+        });
+    </script>
+    
   </body>
 </html>
